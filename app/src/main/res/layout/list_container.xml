@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/row"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgViewProduct"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/title"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgViewProduct" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/brand"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/rating"
+            app:layout_constraintBottom_toTopOf="@+id/btnAddToFav"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <Button
+            android:id="@+id/btnAddToFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="@string/add_to_favourites"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtViewProductTitle"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtViewProductPrice" />
+
+        <TextView
+            android:id="@+id/txtViewProductPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtViewProductBrand" />
+
+        <TextView
+            android:id="@+id/txtViewProductBrand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtViewProductDesc" />
+
+        <TextView
+            android:id="@+id/txtViewProductDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+        <RatingBar
+            android:id="@+id/ratingBarProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressBackgroundTintMode="multiply"
+            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="@+id/txtViewProductDesc"
+            app:layout_constraintStart_toStartOf="@+id/txtViewProductDesc"
+            app:layout_constraintTop_toTopOf="@+id/textView5"
+            tools:max="5"
+            tools:progress="3" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/discount"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/txtProductDiscount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtViewProductPrice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
